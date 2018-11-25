@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 {
     /// <summary>
-    /// 
+    /// 产品控制器
     /// </summary>
     public class ProductsController : BaseController//ControllerBase
     {
@@ -26,11 +26,11 @@ namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 
         #region snippet_GetById
         /// <summary>
-        /// 
+        /// 根据id获取产品
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("{id}")]
+        [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
         public async Task<ActionResult<Product>> GetByIdAsync(int id)
@@ -48,9 +48,9 @@ namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 
         #region snippet_BindingSourceAttributes
         /// <summary>
-        /// 
+        /// 获取产品列表
         /// </summary>
-        /// <param name="discontinuedOnly"></param>
+        /// <param name="discontinuedOnly">是否只显示停产的</param>
         /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetAsync(
@@ -71,7 +71,7 @@ namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
         }
         #endregion
         /// <summary>
-        /// 
+        /// 创建产品
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>

@@ -19,27 +19,32 @@ namespace IceDog.WebApi2Core.DataAccess.Repositories
                 _context.Pets.AddRange(
                     new Pet
                     {
-                        Name = "Opie",
-                        Breed = "Shih Tzu",
+                        Name = "Opie 奥比",
+                        Breed = "Shih Tzu 狮子狗",
                         PetType = PetType.Dog
                     },
                     new Pet
                     {
-                        Name = "Reggie",
-                        Breed = "Beagle",
+                        Name = "Reggie 雷吉",
+                        Breed = "Beagle 猎兔犬",
                         PetType = PetType.Dog
                     },
                     new Pet
                     {
-                        Name = "Diesel",
-                        Breed = "Bombay",
+                        Name = "Diesel 迪赛",
+                        Breed = "Bombay 孟买猫",
                         PetType = PetType.Cat
                     },
                     new Pet
                     {
-                        Name = "Lucy",
-                        Breed = "Maine Coon",
+                        Name = "Lucy 露西",
+                        Breed = "Maine Coon 缅因猫",
                         PetType = PetType.Cat
+                    },
+                    new Pet {
+                        Name="gou zi 狗子",
+                        Breed= "Chinese pastoral dog 中华田园犬",
+                        PetType = PetType.Dog
                     });
                 _context.SaveChanges();
             }

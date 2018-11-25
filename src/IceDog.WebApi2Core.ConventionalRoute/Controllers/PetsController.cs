@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 {
     /// <summary>
-    /// 
+    /// 宠物控制器
     /// </summary>
     public class PetsController : BaseController//ControllerBase
     {
@@ -21,7 +21,7 @@ namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
             _repository = repository;
         }
         /// <summary>
-        /// 异步获取所有宠物
+        /// 获取所有宠物
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -30,9 +30,9 @@ namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
             return await _repository.GetPetsAsync();
         }
         /// <summary>
-        /// 
+        /// 根据id获取宠物信息
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">id</param>
         /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<Pet>> GetByIdAsync(int id)
@@ -47,7 +47,7 @@ namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
             return pet;
         }
         /// <summary>
-        /// 
+        /// 创建宠物
         /// </summary>
         /// <param name="pet"></param>
         /// <returns></returns>
