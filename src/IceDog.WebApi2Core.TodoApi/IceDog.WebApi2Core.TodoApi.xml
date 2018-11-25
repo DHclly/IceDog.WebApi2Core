@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IceDog.WebApi2Core.TodoApi</name>
+    </assembly>
+    <members>
+        <member name="T:IceDog.WebApi2Core.TodoApi.Controllers.TodoController">
+            <summary>
+            Todo控制器
+            </summary>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Controllers.TodoController.#ctor(IceDog.WebApi2Core.TodoApi.Context.TodoContext)">
+            <summary>
+            控制器的构造函数
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Controllers.TodoController.GetAll">
+            <summary>
+            获取所有对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Controllers.TodoController.GetById(System.Int64)">
+            <summary>
+            通过id获取单个对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Controllers.TodoController.Create(IceDog.WebApi2Core.TodoApi.Models.TodoItem)">
+             <summary>
+             创建一个对象。
+             </summary>
+             <remarks>
+             请求示例:
+            
+                 POST /Todo
+                 {
+                    "id": 1,
+                    "name": "Item1",
+                    "isComplete": true
+                 }
+            
+             </remarks>
+             <param name="item">TodoItem对象</param>
+             <returns>返回一个新建的TodoItem对象</returns>
+             <response code="201">返回一个新建的TodoItem对象</response>
+             <response code="400">如果item为null</response>            
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Controllers.TodoController.Update(System.Int64,IceDog.WebApi2Core.TodoApi.Models.TodoItem)">
+            <summary>
+            根据id更新一个对象
+            </summary>
+            <param name="id"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Controllers.TodoController.Delete(System.Int64)">
+            <summary>
+            根据id删除一个对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IceDog.WebApi2Core.TodoApi.Models.TodoItem">
+            <summary>
+            待办事项模型
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.TodoApi.Models.TodoItem.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.TodoApi.Models.TodoItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.TodoApi.Models.TodoItem.IsComplete">
+            <summary>
+            是否完成
+            </summary>
+        </member>
+        <member name="T:IceDog.WebApi2Core.TodoApi.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Program.BuildWebHost(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IceDog.WebApi2Core.TodoApi.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:IceDog.WebApi2Core.TodoApi.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:IceDog.WebApi2Core.TodoApi.SwaggerHiddenApi.HiddenApiAttribute">
+            <summary>
+            swagger ui 文档隐藏api
+            </summary>
+        </member>
+        <member name="T:IceDog.WebApi2Core.TodoApi.SwaggerHiddenApi.HiddenApiFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IceDog.WebApi2Core.TodoApi.SwaggerHiddenApi.HiddenApiFilter.Apply(Swashbuckle.AspNetCore.Swagger.SwaggerDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>
