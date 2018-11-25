@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 {
+    [Route("api/[controller]/[action]")]
     [ApiController]
+    [Produces("application/json")]
     public class BaseController : ControllerBase
     {
 

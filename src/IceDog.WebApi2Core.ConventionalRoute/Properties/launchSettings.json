@@ -20,7 +20,7 @@
     "IceDog.WebApi2Core.ConventionalRoute": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/pets/get",
+      "launchUrl": "",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

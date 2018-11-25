@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductsController : ControllerBase
+    //[Route("api/[controller]")]
+    //[ApiController]
+    public class ProductsController : BaseController//ControllerBase
     {
         private readonly ProductsRepository _repository;
 

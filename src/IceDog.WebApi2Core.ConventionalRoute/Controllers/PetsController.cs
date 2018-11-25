@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 {
     [Produces("application/json")]//希望返回的ContentType类型
-    [Route("api/[controller]")]//特性路由
-    [ApiController]//表明这是web api controller
-    public class PetsController : ControllerBase
+    //[Route("api/[controller]")]//特性路由
+    //[ApiController]//表明这是web api controller
+    public class PetsController : BaseController//ControllerBase
     {
         private readonly PetsRepository _repository;
 
