@@ -67,9 +67,9 @@ namespace IceDog.WebApi2Core.ConventionalRoute
 
             services.Configure<ApiBehaviorOptions>(options =>
             {
-                //options.SuppressConsumesConstraintForFormFileParameters = true;
-                //options.SuppressInferBindingSourcesForParameters = true;
-                //options.SuppressModelStateInvalidFilter = true;
+                //options.SuppressConsumesConstraintForFormFileParameters = true;//禁止对表单文件参数的默认行为
+                //options.SuppressInferBindingSourcesForParameters = true;//禁用默认推理规则,禁止推断绑定参数源
+                //options.SuppressModelStateInvalidFilter = true;//禁用模型状态无效过滤器，如果操作可从模型验证错误中恢复，禁用默认行为是有用的。
             });
         }
 

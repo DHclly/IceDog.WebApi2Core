@@ -1,7 +1,7 @@
 # IceDog.WebApi2Core
 
 ## 项目介绍
-对于 .net core 中 web api2项目的测试
+对于 .net core 中 web api2项目的测试，默认都是以2.1为基准
 
 ## IceDog.WebApi2Core.ConventionalRoute
 
