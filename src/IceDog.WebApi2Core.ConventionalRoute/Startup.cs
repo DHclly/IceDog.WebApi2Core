@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using IceDog.WebApi2Core.DataAccess;
 using IceDog.WebApi2Core.DataAccess.Repositories;
@@ -12,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace IceDog.WebApi2Core.ConventionalRoute
@@ -31,7 +34,7 @@ namespace IceDog.WebApi2Core.ConventionalRoute
             services.AddScoped<ProductsRepository>();
             services.AddScoped<PetsRepository>();
 
-            services.AddDbContext<ProductContext>(opt =>opt.UseInMemoryDatabase("ProductInventory"));
+            services.AddDbContext<ProductContext>(opt =>opt.UseInMemoryDatabase("ProductInventory"));//inventory 清单、库存
             services.AddDbContext<PetContext>(opt =>opt.UseInMemoryDatabase("PetInventory"));
 
             //用于可以使用[ApiController]特性
@@ -44,13 +47,29 @@ namespace IceDog.WebApi2Core.ConventionalRoute
                     Title = "ASP.NET Core 2.1+ Web API2",
                     Version = "v1"
                 });
+
+                //给swagger生成器设置项目生成的xml注释文档的路径
+                var xmlFile = $"{Assembly.GetEntryAssembly().GetName().Name}.xml";
+                //var basePath = AppContext.BaseDirectory;
+                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+
+                var xmlPath = Path.Combine(basePath, xmlFile);
+                c.IncludeXmlComments(xmlPath);//可以调用多个
+
+                xmlFile = $"{typeof(ProductContext).Assembly.GetName().Name}.xml";
+                xmlPath = Path.Combine(basePath, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+
+                c.DescribeAllEnumsAsStrings();//描述枚举值为字面量，而不是数值
+                c.DescribeStringEnumsInCamelCase();//所有枚举变量用camelCase
+                c.DescribeAllParametersInCamelCase();//所有参数变量用camelCase
             });
 
             services.Configure<ApiBehaviorOptions>(options =>
             {
-                options.SuppressConsumesConstraintForFormFileParameters = true;
-                options.SuppressInferBindingSourcesForParameters = true;
-                options.SuppressModelStateInvalidFilter = true;
+                //options.SuppressConsumesConstraintForFormFileParameters = true;
+                //options.SuppressInferBindingSourcesForParameters = true;
+                //options.SuppressModelStateInvalidFilter = true;
             });
         }
 

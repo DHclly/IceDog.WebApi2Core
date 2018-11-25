@@ -6,26 +6,35 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 {
-    [Produces("application/json")]//希望返回的ContentType类型
-    //[Route("api/[controller]")]//特性路由
-    //[ApiController]//表明这是web api controller
+    /// <summary>
+    /// 
+    /// </summary>
     public class PetsController : BaseController//ControllerBase
     {
         private readonly PetsRepository _repository;
-
-        public PetsController(PetsRepository repository)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="repository"></param>
+        public PetsController(PetsRepository repository)//构造函数依赖注入
         {
             _repository = repository;
         }
-
+        /// <summary>
+        /// 异步获取所有宠物
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<List<Pet>>> GetAllAsync()
         {
             return await _repository.GetPetsAsync();
         }
-
-        [HttpGet("{id}")]
-        [ProducesResponseType(404)]
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
         public async Task<ActionResult<Pet>> GetByIdAsync(int id)
         {
             var pet = await _repository.GetPetAsync(id);
@@ -37,9 +46,13 @@ namespace IceDog.WebApi2Core.ConventionalRoute.Controllers
 
             return pet;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pet"></param>
+        /// <returns></returns>
         [HttpPost]
-        [ProducesResponseType(400)]
+        [ProducesResponseType(400)]//返回响应码 400
         public async Task<ActionResult<Pet>> CreateAsync(Pet pet)
         {
             if (!ModelState.IsValid)
