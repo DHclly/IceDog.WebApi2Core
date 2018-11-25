@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IceDog.WebApi2Core.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:IceDog.WebApi2Core.DataAccess.Models.Order">
+            <summary>
+            订单类
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Order.Id">
+            <summary>
+            订单id
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Order.Description">
+            <summary>
+            订单描述
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Order.OrderDate">
+            <summary>
+            订单日期
+            </summary>
+        </member>
+        <member name="T:IceDog.WebApi2Core.DataAccess.Models.Pet">
+            <summary>
+            宠物
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Pet.Id">
+            <summary>
+            宠物id
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Pet.Breed">
+            <summary>
+            品种
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Pet.Name">
+            <summary>
+            宠物名称
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Pet.PetType">
+            <summary>
+            宠物类型
+            </summary>
+        </member>
+        <member name="T:IceDog.WebApi2Core.DataAccess.Models.PetType">
+            <summary>
+            宠物类型
+            </summary>
+        </member>
+        <member name="F:IceDog.WebApi2Core.DataAccess.Models.PetType.Dog">
+            <summary>
+            狗
+            </summary>
+        </member>
+        <member name="F:IceDog.WebApi2Core.DataAccess.Models.PetType.Cat">
+            <summary>
+            猫
+            </summary>
+        </member>
+        <member name="T:IceDog.WebApi2Core.DataAccess.Models.Product">
+            <summary>
+            产品类
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Product.Id">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Product.IsDiscontinued">
+            <summary>
+            是否停产
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Product.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:IceDog.WebApi2Core.DataAccess.Models.Product.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+    </members>
+</doc>

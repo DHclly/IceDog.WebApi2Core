@@ -1,0 +1,12 @@
+.swagger-ui .topbar {
+    background-color: #6cf;
+    border-bottom: 3px solid #547f00;
+}
+
+.swagger-ui .information-container{
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding:10px 20px;
+    width: initial;
+}

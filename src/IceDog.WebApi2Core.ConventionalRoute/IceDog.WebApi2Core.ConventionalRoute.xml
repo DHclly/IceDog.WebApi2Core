@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IceDog.WebApi2Core.ConventionalRoute</name>
+    </assembly>
+    <members>
+        <member name="T:IceDog.WebApi2Core.ConventionalRoute.Controllers.PetsController">
+            <summary>
+            宠物控制器
+            </summary>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.PetsController.#ctor(IceDog.WebApi2Core.DataAccess.Repositories.PetsRepository)">
+            <summary>
+            
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.PetsController.GetAllAsync">
+            <summary>
+            获取所有宠物
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.PetsController.GetByIdAsync(System.Int32)">
+            <summary>
+            根据id获取宠物信息
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.PetsController.CreateAsync(IceDog.WebApi2Core.DataAccess.Models.Pet)">
+            <summary>
+            创建宠物
+            </summary>
+            <param name="pet"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IceDog.WebApi2Core.ConventionalRoute.Controllers.ProductsController">
+            <summary>
+            产品控制器
+            </summary>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.ProductsController.#ctor(IceDog.WebApi2Core.DataAccess.Repositories.ProductsRepository)">
+            <summary>
+            
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.ProductsController.GetByIdAsync(System.Int32)">
+            <summary>
+            根据id获取产品
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.ProductsController.GetAsync(System.Boolean)">
+            <summary>
+            获取产品列表
+            </summary>
+            <param name="discontinuedOnly">是否只显示停产的</param>
+            <returns></returns>
+        </member>
+        <member name="M:IceDog.WebApi2Core.ConventionalRoute.Controllers.ProductsController.CreateAsync(IceDog.WebApi2Core.DataAccess.Models.Product)">
+            <summary>
+            创建产品
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
