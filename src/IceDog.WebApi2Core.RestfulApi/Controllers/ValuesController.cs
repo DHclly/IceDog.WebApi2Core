@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace IceDog.WebApi2Core.RestfulApi.Controllers
 {
     [Route("api/[controller]")]
+    [ApiExplorerSettings(IgnoreApi =true)]
     [ApiController]
     public class ValuesController : ControllerBase
     {
